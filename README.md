@@ -7,6 +7,7 @@ This is a monorepo template for building full-stack applications using:
 - **Vite + React + TypeScript + SWC** in `packages/client`
 - **Fastify + TSX** in `packages/server`
 - **tRPC** for end-to-end typesafe APIs
+- **Tailwind CSS** for styling
 
 ## Getting Started
 
