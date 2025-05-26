@@ -1,3 +1,6 @@
+// Uncomment this line when using tRPC
+import { trpc } from './trpc';
+
 function App() {
   return (
     <>
