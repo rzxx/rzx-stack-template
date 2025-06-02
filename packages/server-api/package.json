@@ -5,7 +5,7 @@
   "main": "index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "tsx watch src/app.ts",
+    "dev": "tsx watch src/dev-server.ts",
     "build": "tsc --build",
     "start": "node dist/app.js"
   },
@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@fastify/aws-lambda": "^5.1.4",
-    "@trpc/server": "^11.1.2",
+    "@trpc/server": "^11.2.0",
     "fastify": "^5.3.3"
   },
   "devDependencies": {
