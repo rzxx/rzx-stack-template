@@ -101,6 +101,9 @@ importers:
       '@fastify/aws-lambda':
         specifier: ^5.1.4
         version: 5.1.4
+      '@fastify/cors':
+        specifier: ^11.0.1
+        version: 11.0.1
       '@trpc/server':
         specifier: ^11.2.0
         version: 11.2.0(typescript@5.8.3)
@@ -396,6 +399,9 @@ packages:
 
   '@fastify/aws-lambda@5.1.4':
     resolution: {integrity: sha512-ExyaFMcEJXyUnYktzs5ww/5iDI8LcXMiIMnYZW6aavSIu+W0d08bJhvw8ShHL9wsRrRvfH+BOLdUEVB8oQ4Rew==}
+
+  '@fastify/cors@11.0.1':
+    resolution: {integrity: sha512-dmZaE7M1f4SM8ZZuk5RhSsDJ+ezTgI7v3HHRj8Ow9CneczsPLZV6+2j2uwdaSLn8zhTv6QV0F4ZRcqdalGx1pQ==}
 
   '@fastify/error@4.1.0':
     resolution: {integrity: sha512-KeFcciOr1eo/YvIXHP65S94jfEEqn1RxTRBT1aJaHxY5FK0/GDXYozsQMMWlZoHgi8i0s+YtrLsgj/JkUUjSkQ==}
@@ -1315,6 +1321,9 @@ packages:
 
   fast-uri@3.0.6:
     resolution: {integrity: sha512-Atfo14OibSv5wAp4VWNsFYE1AchQRTv9cBGWET4pZWHzYshFSS9NQI6I57rdKn9croWVMbYFbLhJ+yJvmZIIHw==}
+
+  fastify-plugin@5.0.1:
+    resolution: {integrity: sha512-HCxs+YnRaWzCl+cWRYFnHmeRFyR5GVnJTAaCJQiYzQSDwK9MgJdyAsuL3nh0EWRCYMgQ5MeziymvmAhUHYHDUQ==}
 
   fastify@5.3.3:
     resolution: {integrity: sha512-nCBiBCw9q6jPx+JJNVgO8JVnTXeUyrGcyTKPQikRkA/PanrFcOIo4R+ZnLeOLPZPGgzjomqfVarzE0kYx7qWiQ==}
@@ -2508,6 +2517,11 @@ snapshots:
 
   '@fastify/aws-lambda@5.1.4': {}
 
+  '@fastify/cors@11.0.1':
+    dependencies:
+      fastify-plugin: 5.0.1
+      toad-cache: 3.7.0
+
   '@fastify/error@4.1.0': {}
 
   '@fastify/fast-json-stringify-compiler@5.0.3':
@@ -3551,6 +3565,8 @@ snapshots:
   fast-redact@3.5.0: {}
 
   fast-uri@3.0.6: {}
+
+  fastify-plugin@5.0.1: {}
 
   fastify@5.3.3:
     dependencies:
