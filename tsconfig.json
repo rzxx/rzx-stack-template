@@ -19,8 +19,8 @@
             "@client/*": [
                 "packages/client/src/*"
             ],
-            "@server/*": [
-                "packages/server/src/*"
+            "@server-api/*": [
+                "packages/server-api/src/*"
             ]
         },
         "noEmit": true,
@@ -30,7 +30,7 @@
             "path": "./packages/client"
         },
         {
-            "path": "./packages/server"
+            "path": "./packages/server-api"
         }
     ]
 }

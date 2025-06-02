@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpm --parallel --stream dev",
-    "build": "pnpm --filter server build && pnpm --filter client build",
-    "start": "pnpm --filter server start"
+    "build": "pnpm --filter server-api build && pnpm --filter client build",
+    "start": "pnpm --filter server-api start"
   },
   "keywords": [],
   "author": "",

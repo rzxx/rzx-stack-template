@@ -4,6 +4,7 @@ import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import pluginRouter from '@tanstack/eslint-plugin-router'
+import pluginQuery from '@tanstack/eslint-plugin-query'
 import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
@@ -31,6 +32,7 @@ export default tseslint.config(
       'plugin:react-hooks/recommended',
       'plugin:react-refresh/recommended',
       ...pluginRouter.configs['flat/recommended'],
+      ...pluginQuery.configs['flat/recommended'],
     ],
     settings: {
       react: {
