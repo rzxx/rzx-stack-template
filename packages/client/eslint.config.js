@@ -3,10 +3,11 @@ import globals from 'globals'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
+import pluginRouter from '@tanstack/eslint-plugin-router'
 import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
-  { ignores: ['dist', 'build', 'node_modules'] },
+  { ignores: ['dist', 'build', 'node_modules', 'src/routeTree.gen.ts'] },
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
@@ -29,6 +30,7 @@ export default tseslint.config(
       'plugin:react/recommended',
       'plugin:react-hooks/recommended',
       'plugin:react-refresh/recommended',
+      ...pluginRouter.configs['flat/recommended'],
     ],
     settings: {
       react: {
