@@ -1,4 +1,4 @@
-import { buildApiApp } from './app';
+import { buildApiApp } from './app.js';
 import { awsLambdaFastify } from '@fastify/aws-lambda';
 
 const fastifyApp = buildApiApp();

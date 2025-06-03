@@ -1,4 +1,4 @@
-import { buildApiApp } from './app';
+import { buildApiApp } from './app.js';
 
 const fastify = buildApiApp();
 
