@@ -1,9 +1,11 @@
 {
     "extends": "./tsconfig.json",
     "compilerOptions": {
+        "composite": false,
+        "declaration": false,
+        "declarationMap": false,
+        "emitDeclarationOnly": false,
         "outDir": "./dist/js", // Output JS to a different subfolder
-        "emitDeclarationOnly": false, // IMPORTANT: We need JS files
-        "declaration": false, // No need for .d.ts files in the JS output for the lambda
         "module": "NodeNext",
         "removeComments": true // Optional: to reduce bundle size
     },
