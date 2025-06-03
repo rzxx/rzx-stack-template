@@ -1,0 +1,32 @@
+[build]
+  # Command to build project.
+  # This will run `pnpm run build` in both `client` and `server-api`.
+  command = "pnpm install && pnpm run build"
+
+  # Directory (relative to root) where static frontend files are built.
+  publish = "packages/client/dist"
+
+  # Directory (relative to root) where Netlify Functions source code is.
+  # Netlify will automatically detect and build .ts or .js files here.
+  functions = "netlify/functions"
+
+# Rewrite rule for tRPC: all /trpc calls go to the 'api' function.
+# The :splat captures the rest of the path (e.g., 'ping', 'user.list').
+# The 'api' function (netlify/functions/api.ts) will receive this full path.
+# Fastify router with prefix '/trpc' will then handle it.
+[[redirects]]
+  from = "/trpc/*"
+  to = "/.netlify/functions/api/trpc/:splat" # The :splat is passed to the function
+  status = 200 # Use 200 for API proxies/rewrites
+
+
+# Settings for `netlify dev` (local development)
+[dev]
+  # Command to start frontend development server.
+  command = "pnpm --filter client dev" # This starts Vite on port 5173 (as per vite.config.ts)
+
+  # Port that frontend dev server (Vite) runs on.
+  targetPort = 5173
+
+  # Tell Netlify Dev that it's using Vite.
+  framework = "#vite"

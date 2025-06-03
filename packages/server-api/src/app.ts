@@ -9,9 +9,18 @@ export function buildApiApp() {
         logger: true,
     });
 
+    let allowedOrigin: string | string[] | RegExp | undefined = undefined;
+
+    if (process.env.NODE_ENV === 'development') {
+        allowedOrigin = '*';
+    } else if (process.env.URL) {
+        allowedOrigin = process.env.URL;
+    }
+
     fastify.register(fastifyCors, {
-        origin: process.env.CORS_ORIGIN || '*',
+        origin: allowedOrigin || false,
         credentials: true,
+        methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     });
 
     fastify.register(fastifyTRPCPlugin, {

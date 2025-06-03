@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "./dist/js/lambda.js",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/types/router/index.d.ts",
   "scripts": {
     "dev": "tsx watch src/dev-server.ts",
     "build:types": "tsc -p tsconfig.json",
