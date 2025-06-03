@@ -11,7 +11,7 @@
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
         "moduleResolution": "NodeNext",
-        "outDir": "./dist",
+        "outDir": "./dist/types",
         "rootDir": "./src",
         "declaration": true, // Crucial for client to import types
         "emitDeclarationOnly": true // Only emit types, not JS
@@ -21,6 +21,7 @@
     ],
     "exclude": [
         "node_modules",
-        "dist"
+        "dist",
+        "src/dev-server.ts"
     ],
 }

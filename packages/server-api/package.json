@@ -2,12 +2,14 @@
   "name": "server-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/js/lambda.js",
+  "types": "./dist/types/index.d.ts",
   "scripts": {
     "dev": "tsx watch src/dev-server.ts",
-    "build": "tsc --build",
-    "start": "node dist/app.js"
+    "build:types": "tsc -p tsconfig.json",
+    "build:js": "tsc -p tsconfig.build.json",
+    "build": "pnpm run build:types && pnpm run build:js",
+    "start": "node dist/js/app.js"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,15 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "outDir": "./dist/js", // Output JS to a different subfolder
+        "emitDeclarationOnly": false, // IMPORTANT: We need JS files
+        "declaration": false, // No need for .d.ts files in the JS output for the lambda
+        "module": "NodeNext",
+        "removeComments": true // Optional: to reduce bundle size
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "src/dev-server.ts" // We don't want to build the dev server for the lambda
+    ]
+}
