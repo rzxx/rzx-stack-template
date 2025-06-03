@@ -13,6 +13,7 @@
         "strict": true,
         "forceConsistentCasingInFileNames": true,
         "skipLibCheck": true,
+        "verbatimModuleSyntax": true,
         "resolveJsonModule": true,
         "baseUrl": ".",
         "paths": {

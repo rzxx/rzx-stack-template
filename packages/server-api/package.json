@@ -1,6 +1,7 @@
 {
   "name": "server-api",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "./dist/js/lambda.js",
   "types": "./dist/types/router/index.d.ts",

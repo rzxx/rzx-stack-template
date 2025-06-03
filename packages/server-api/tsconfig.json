@@ -14,7 +14,8 @@
         "outDir": "./dist/types",
         "rootDir": "./src",
         "declaration": true, // Crucial for client to import types
-        "emitDeclarationOnly": true // Only emit types, not JS
+        "emitDeclarationOnly": true, // Only emit types, not JS
+        "verbatimModuleSyntax": true,
     },
     "include": [
         "src/**/*.ts"
